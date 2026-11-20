@@ -37,7 +37,7 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
 RUN npx -y playwright-core@1.64.1 install-deps chromium
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl git-lfs age ca-certificates zip \
+    curl git-lfs age ca-certificates zip libatomic1 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /tmp/azcopy \
